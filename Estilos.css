@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Young+Serif&display=swap');
+
+
+/*
+COLORES
+	https://g.co/kgs/XYFgBV
+	https://www.color-hex.com/
+
+	Blanco	HEX	#FFF		#ffffff
+	Negro	HEX #000		#000000
+	Azul 	HEX #38739D
+			R 56 - G 115 - B 157
+			C 64%, M 27%, Y 0%, K 38%
+	Azul Intermedio HEX #5581B3
+			R 85 - G 129 - B 179
+			C 53%, M 28%, Y 0%, K 30%
+	Celeste HEX #87C4DE
+			R 135 - G 196 - B 222
+			C 39%, M 12%, Y 0%, K 13%
+	Amarillo HEX #EFB943
+			R 239 - G 185 - B 67
+			C 0%, M 23%, Y 72%, K 6%
+
+	[Mismos códigos de colores -Celeste, blanco & amarillo- usados para ilustrar el favicom de la bandera argentina que generaron un buen contraste.]
+
+TIPOGRAFÍAS
+	Monserrat (disponible en Google font: https://fonts.google.com/specimen/Montserrat)
+	Young Serif (disponible en Google font: https://fonts.google.com/specimen/Young+Serif)
+
+	LLAMADO> font-family: 'Montserrat', sans-serif;
+	LLAMADO> font-family: 'Young Serif', serif;
+
+*/
+
+:root {
+	/*Blanco	HEX	#FFF*/
+	--bgcolor-page: #FFF;
+	/*Azul 	HEX #38739D*/
+	--bgcolor-1: #38739D;
+	/*Azul Intermedio HEX #38739D*/
+	--bgcolor-2: #5581B3;
+	/*Celeste HEX #87C4DE*/
+	--color-2: #87C4DE;
+	/*Amarillo HEX #EFB943*/
+	--color-3: #EFB943;
+	/*Negro	HEX #000*/
+	--text-color-1: #000;
+	/*Azul 	HEX #38739D*/
+	--text-color-2: #38739D;
+	/*Blanco	HEX	#FFF*/
+	--text-color-3: #FFF;
+}
+
+header #Imagen-header {
+	width: 100%;
+  	height: auto;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+
+#Menu-header {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#LinkMenu {
+	color: var(--text-color-1);
+}
+
+
+/* NO header, main, footer {
+	padding-top: 1em;
+	padding-bottom: 1em;
+} */
+
+/*****Transformación links a pages CANDIDATOS*****/
+
+.JML, .PBL, .SML, .JSL, .MBL {
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.JML:hover, .PBL:hover, .SML:hover, .JSL:hover, .MBL:hover {
+	transform: scale(1.1);
+	}
+
+/**************/
+
+#Servicios {
+	background-color: var(--color-2);
+	color: var(--text-color-3);
+	padding-top: 1em;
+	padding-bottom: 3em;
+}
+
+.boton-consulta {
+	background-color: var(--bgcolor-1);
+	font-family: 'Montserrat', sans-serif;
+	color: var(--text-color-3);
+	border: 2px solid var(--bgcolor-1);
+	border-radius: 3em;
+	padding: .5em 1.1em;
+	display: inline-block;
+	box-shadow: 0px 8px 8px 0px #c0dbe7; 
+}
+
+.boton-consulta:hover {
+	color: var(--bgcolor-1);
+	background-color: var(--text-color-3);
+	box-shadow: 0px 8px 8px 0px var(--bgcolor-2); 
+	
+}
+
+.Links-Candidatos ul, .Links-Candidatos2 ul, footer ul, #Citas ul, .FF ul, .datos-candidato ul {
+	list-style-type: none;
+}
+
+
+.Links-Candidatos ul,.Links-Candidatos2 ul, #Citas ul, .Redes-Sociales-FF ul {
+	display: flex;
+	place-content: space-between;
+}
+
+#Menu-header {
+	display: flex;
+	place-content: space-around;
+}
+
+.JML{
+	margin-left: -3em;
+}
+.MBL {
+	margin-right: 5em;
+}
+.JSL{
+	margin-left: 2.5em;
+}
+
+/*NO .Menu-FF {
+	margin-left: 50em;
+	margin-top: -1em;
+	position: relative
+}*/
+
+div.CONTENEDOR, div.Redes-Sociales-FF, div.Menu-FF {
+	width: 100%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+#Servicios div.CONTENEDOR {
+	position: relative;
+	/*padding-top: 14em;
+	padding-bottom: 14em;*/
+}
+
+/*#Servicios H2 {
+	font-size: 2em;
+}*/
+
+#Servicios label {
+	display: block;
+	font-size: 1em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+#Servicios input.text, #Servicios textarea {
+	width: 100%;
+	padding: 0,8em;
+	margin-bottom: 1em;
+	border-radius: 0.5em;
+	box-sizing: border-box;
+}
+
+#Servicios input {
+	cursor: pointer;
+}
+
+#Servicios div.CONTENEDOR div {
+	width: 45%;
+}
+
+#Servicios iframe {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+}
+
+/**CANDIDATOS**/
+
+.SM-titulo {
+	color: var(--text-color-2);
+	text-align: center;
+	font-size: 6em;
+	margin: 0;
+	padding: 0;
+}
+
+div.circulo-am {
+	display: flex;
+	justify-content: center;
+	padding: 0 auto;
+	margin: 0 auto;
+}
+
+.SPOT {
+	background-color: var(--color-2);
+	color: var(--text-color-3);
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+
+main div.CONTENEDOR div.CONT-PRES {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+/*#Servicios div.CONTENEDOR{
+	display: flex;
+	justify-content: space-evenly;
+}*/ 
+
+/*div.DC-LISTA ul li:before {
+	content: '';
+	position: absolute;
+	left: 2em;
+	width: 20px;
+	height: 20px;
+	background-image: url(Imagenes/avance-rapido.gif);
+	background-size: contain;
+}*/
+
+div.DC-LISTA #ITEM-GF {
+	/*display: flex;*/
+	place-content: space-between;
+	/*position: absolute;*/
+	left: 2em;
+	width: 15px;
+	height: 15px;
+}
+
+
+
+/**SLIDES fotos en pages CANDIDATOS**/
+.slider-frame {
+	width: 100%;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+}
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+		animation: slide 20s infinite alternate ease-in-out;
+}
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+.slider-frame img {
+	width: 100%;
+}
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+/***/
+
+/**Pages DEBATES**/
+
+main .Titulo-DB, p {
+	text-align: center;
+	animation: infinite alternate ease-in;
+}
+
+main div.DEB-ATE {
+	padding-bottom: 2em;
+}
+
+#Citas {
+	background-color: var(--bgcolor-1);
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+
+#Citas li {
+	background-color: var(--color-2);
+	color: var(--text-color-2);
+	margin: 1em;
+	text-align: center;
+	padding: 2em 1 em;
+	padding-bottom: 1em;
+	width: 80%;
+	border-radius: 2em;
+}
+
+#Citas li img {
+	width: 8em;
+	height: 8em;
+	border: 5px solid var(--bgcolor-1);
+	border-radius: 50%;
+	margin-top: -4.5em;
+}
+
+/***/
+
+
+/**FOOTER OK**/
+
+footer {
+	position: relative;
+	background-image: url(Imagenes/IMAGEN\ FOOTER\ ok_Mesa\ de\ trabajo\ 1.png);
+	background-size: cover;
+	background-position: center;
+	text-align: left;
+	width: 100%;
+	height: auto;
+	font-size: small;
+}
+
+
+/*
+footer{
+	width: 100%;
+	height: auto;
+	background-color: var(--color-2);
+	color: var(--text-color-1);
+	font-size: small;
+	text-align: center;
+	}
+
+div.contenedor-ff {
+	position: relative;
+	background-image: url(Imagenes/IMAGEN\ FOOTER\ ok_Mesa\ de\ trabajo\ 1.png);
+	background-size: cover;
+	background-position: center;
+	text-align: left
+	}*/
+
+.Redes-Sociales-FF {
+	display: flex;
+	place-content: space-between;
+}
+	
+.Redes-Sociales-FF ul li {
+	padding-right: 1em;
+}
+	
+div.Redes-Sociales-FF {
+	padding-top: 1em;
+	padding-right: 2em;
+}
+
+.MFF {
+	margin-right: 3em;
+	padding-top: 1em;
+}
+
+div.Derechos-reservados {
+	font-size: small
+	color (--text-color-1);
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+
+/**NO FF
+
+div.Menu-FF {
+	margin-right: auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#QR-FF {
+	margin: auto;
+	display: block;	
+}
+
+#IMG-FF {
+	width: 100%;
+  	height: auto;
+}
+.Redes-Sociales-FF {
+	position: absolute;
+	transform: translate(-50%; -50);
+}
+
+div.Derechos-reservados {
+	font-size: small
+	color (--text-color-1)
+	padding-top: 1em;
+	padding-bottom: 1em;
+		text-shadow: 0 0 8px #c0dbe7;
+		width: 1080px;
+		margin: 0 auto;
+		position: absolute;
+		top: auto;
+		left: auto
+		transform: translate(-50%, -50%);
+
+EX Footer {
+	background-image: url(Imagenes/ABAJO\ ARG\ VOTA\ con\ qr.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: var(--color-2); 
+	}
+	
+*****/
