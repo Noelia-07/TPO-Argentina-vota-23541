@@ -224,9 +224,8 @@ main div.CONTENEDOR div.CONT-PRES {
 /*#Servicios div.CONTENEDOR{
 	display: flex;
 	justify-content: space-evenly;
-}*/ 
-
-/*div.DC-LISTA ul li:before {
+} 
+div.DC-LISTA ul li:before {
 	content: '';
 	position: absolute;
 	left: 2em;
@@ -379,6 +378,28 @@ div.Derechos-reservados {
 	padding-bottom: 1em;
 }
 
+.animate__animated {
+	--animate-duration: 3s;
+	animation-iteration-count: 2;
+  }
+
+/* #CONTENEDOR-RES{
+	width: 100%;
+    height: auto;
+	overflow: visible;
+} */
+
+#B-RESULTADOS {
+	background-image: url(https://resultados.gob.ar/);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-top: -0,5;
+}
 
 /**NO FF
 
