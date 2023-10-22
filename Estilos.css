@@ -70,6 +70,210 @@ body {
 	color: var(--text-color-1);
 }
 
+#LinkMenu:hover {
+		
+	color: #FFF;
+	cursor: pointer;
+}
+
+
+/* Agregado GV */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #87C4DE;
+    
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+	.Links-Candidatos ul,.Links-Candidatos2 ul{
+		/* display: flex; */
+		/* flex-direction: column; */
+		flex-wrap: wrap;
+		justify-content: center
+		
+	}
+	.JML,.PBL,.SML,.JSL,.MBL {
+		display: flex;
+		align-self: center;
+		
+	}
+
+	
+	#SM-titulo  {
+		color: var(--text-color-2);
+		text-align: center;
+		font-size: 2em;
+		margin: 0;
+		padding: 0;
+	}
+
+}
+
+
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+	header{
+		justify-content: flex-end;
+	}
+
+	.Links-Candidatos ul,.Links-Candidatos2 ul{
+		display: flex !important;
+		flex-direction: column;
+		align-content: flex-end
+		/* flex-wrap: wrap; */
+	}
+
+
+    .JML,.PBL,.SML,.JSL,.MBL {
+		display: flex;
+		align-self: center;
+	}
+
+	.Redes-Sociales-FF ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.MFF{
+		
+		visibility: hidden;
+	} 
+
+	#Citas ul{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+	}
+
+
+
+    .abrir-menu {
+        color: #1c1c1c;
+		position: fixed;
+		z-index: 1000;
+		
+    }
+
+    .cerrar-menu {
+        color: #1c1c1c;
+		z-index: 1100;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #5581B3;
+        padding: 1rem;
+        box-shadow: 0 0 0 100vmax rgba(77, 131, 239, 0.5);
+		z-index: 1100;
+    }
+
+    .nav.visible {
+        opacity: 90%;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+   
+	.DEB-ATE {
+		/* display: flex;
+		align-self: center; */
+		position: relative;
+        padding-bottom: 56.25%; 
+        padding-top: 200px; 
+        height: 100%;
+        overflow: hidden;
+	}
+   
+	.DEB-ATE iframe {
+		position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+	}
+    
+	
+	/* .CONTENEDOR iframe{
+		position: absolute;
+		overflow: hidden;
+	    top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+	} */
+
+    .PARTIDO{
+		width: 200px;
+	}
+
+    .Presentacion{
+		margin: 1rem;
+		padding: 1rem;
+	}
+
+	.DC-LISTA{
+		margin: 1rem;
+		padding: 1rem;
+	}
+
+	} 
+
+
+/* fin del media Q. */
+
+
+
 
 /* NO header, main, footer {
 	padding-top: 1em;
@@ -121,7 +325,8 @@ body {
 
 .Links-Candidatos ul,.Links-Candidatos2 ul, #Citas ul, .Redes-Sociales-FF ul {
 	display: flex;
-	place-content: space-between;
+	justify-content: center;
+	/* place-content: space-between; */
 }
 
 #Menu-header {
@@ -149,10 +354,19 @@ div.CONTENEDOR, div.Redes-Sociales-FF, div.Menu-FF {
 	width: 100%;
 	max-width: 1080px;
 	margin: 0 auto;
-}
+	}
+
+	
+
 
 #Servicios div.CONTENEDOR {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
 	position: relative;
+	
+   	
 	/*padding-top: 14em;
 	padding-bottom: 14em;*/
 }
@@ -181,16 +395,29 @@ div.CONTENEDOR, div.Redes-Sociales-FF, div.Menu-FF {
 }
 
 #Servicios div.CONTENEDOR div {
-	width: 45%;
+	width: 80%;
 }
 
 #Servicios iframe {
-	position: absolute;
+	position: relative;
 	right: 0;
-	top: 0;
-	width: 50%;
-	height: 100%;
+	margin-top: 1em;
+	margin-right: 1em;
+	width: 80%;
+	/* height: 80%; */
 }
+
+#Servicios FORM {
+	position: relative;
+	right: 0;
+	margin-top: 1em;
+	margin-right: 1em;
+	width: 80%;
+	/* height: 80%; */
+}
+
+
+
 
 /**CANDIDATOS**/
 
@@ -219,6 +446,8 @@ div.circulo-am {
 main div.CONTENEDOR div.CONT-PRES {
 	display: flex;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
+	justify-items: center;
 }
 
 /*#Servicios div.CONTENEDOR{
@@ -292,6 +521,11 @@ main div.DEB-ATE {
 	padding-bottom: 2em;
 }
 
+.DEB-ATE {
+	display: flex;
+	align-self: center;
+}
+
 #Citas {
 	background-color: var(--bgcolor-1);
 	padding-top: 5em;
@@ -355,6 +589,8 @@ div.contenedor-ff {
 .Redes-Sociales-FF {
 	display: flex;
 	place-content: space-between;
+	justify-content: center;
+   
 }
 	
 .Redes-Sociales-FF ul li {
@@ -364,6 +600,8 @@ div.contenedor-ff {
 div.Redes-Sociales-FF {
 	padding-top: 1em;
 	padding-right: 2em;
+	padding-left: 2em;
+	flex-wrap: wrap
 }
 
 .MFF {
@@ -389,13 +627,36 @@ div.Derechos-reservados {
 	overflow: visible;
 } */
 
+/* probando responsive en b-resultados */
+
+.B-RESULTADOS {
+	display: flex;
+	align-self: center;
+	position: relative;
+	padding-bottom: 56.25%; 
+	padding-top: 200px; 
+	height: 100%;
+	overflow: hidden;
+}
+
+.B-RESULTADOS iframe {
+	position: absolute;
+	margin-left: 1em;
+	margin-right: 5em;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
 #B-RESULTADOS {
 	background-image: url(https://resultados.gob.ar/);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
-	width: 100%;
+	width: 99%;
 	height: auto;
 	overflow: hidden;
 	padding-top: -0,5;
