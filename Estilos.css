@@ -157,14 +157,28 @@ header {
 	.Links-Candidatos ul,.Links-Candidatos2 ul{
 		display: flex !important;
 		flex-direction: column;
-		align-content: flex-end
-		/* flex-wrap: wrap; */
+		align-content: center;
+		
+	}
+     
+    .Links-Candidatos img,.Links-Candidatos2 img{
+		width: 250px;
+		/* height: 200px; */
+		
 	}
 
+	.PBL img{
+       width: 200px;
+	
+	}
 
     .JML,.PBL,.SML,.JSL,.MBL {
 		display: flex;
-		align-self: center;
+		/* align-self: center; */
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		/* align-content: center;
+		flex-wrap: nowrap */
 	}
 
 	.Redes-Sociales-FF ul {
@@ -266,6 +280,7 @@ header {
 		margin: 1rem;
 		padding: 1rem;
 	}
+
 
 	} 
 
