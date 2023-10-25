@@ -29,3 +29,10 @@ function validarFormulario() {
     }
     
 }
+// solucion al focus que tiene el iframe de "¿Donde Voto?"
+ 
+     window.onload = function() {
+         setTimeout(function() {
+            window.scrollTo(0, 0);
+         }, 1); 
+     }
