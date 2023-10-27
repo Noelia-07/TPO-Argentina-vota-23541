@@ -51,24 +51,55 @@ TIPOGRAFÍAS
 	--text-color-3: #FFF;
 }
 
-header #Imagen-header {
-	width: 100%;
-  	height: auto;
-}
-
 body {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 }
 
+header, main, aside, footer {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-image: url(Imagenes/IMAGEN\ FOOTER\ ok_Mesa\ de\ trabajo\ 1.png);
+    
+}
+
 #Menu-header {
+    display: flex;
+	/*place-content: space-around;*/
+    justify-content: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#LinkMenu {
+    margin: 0 20px;
+    text-decoration: none;
+	color: var(--text-color-1);
+}
+
+#LinkMenu:hover {
+	color: var(--text-color-2);
+	cursor: pointer;
+}
+
+header #Imagen-header {
+	width: 100%;
+  	height: auto;
+}
+/* #Menu-header {
 	padding-top: 1em;
 	padding-bottom: 1em;
 }
 
 #LinkMenu {
 	color: var(--text-color-1);
-}
+}*/
 
 
 /* NO header, main, footer {
@@ -118,15 +149,9 @@ body {
 	list-style-type: none;
 }
 
-
 .Links-Candidatos ul,.Links-Candidatos2 ul, #Citas ul, .Redes-Sociales-FF ul {
 	display: flex;
 	place-content: space-between;
-}
-
-#Menu-header {
-	display: flex;
-	place-content: space-around;
 }
 
 .JML{
@@ -192,6 +217,7 @@ div.CONTENEDOR, div.Redes-Sociales-FF, div.Menu-FF {
 	height: 100%;
 }
 
+
 /**CANDIDATOS**/
 
 .SM-titulo {
@@ -244,7 +270,12 @@ div.DC-LISTA #ITEM-GF {
 	height: 15px;
 }
 
-
+.pie-foto {
+	color: var(--text-color-2);
+	text-align: right;
+	font-size: 0.8em;
+	padding-right: 3em;
+}
 
 /**SLIDES fotos en pages CANDIDATOS**/
 .slider-frame {
@@ -288,6 +319,10 @@ main .Titulo-DB, p {
 	animation: infinite alternate ease-in;
 }
 
+main .hashtagDB23 {
+	text-decoration: none;
+}
+
 main div.DEB-ATE {
 	padding-bottom: 2em;
 }
@@ -299,7 +334,9 @@ main div.DEB-ATE {
 }
 
 #Citas li {
-	background-color: var(--color-2);
+	/**background-color: var(--color-2);**/
+	/**background-image: url(Imagenes/Papel\ Celeste.jpg);**/
+	background-image: url(Imagenes/IMAGEN\ FOOTER\ ok_Mesa\ de\ trabajo\ 1.png);
 	color: var(--text-color-2);
 	margin: 1em;
 	text-align: center;
@@ -333,6 +370,15 @@ footer {
 	font-size: small;
 }
 
+#LinkMenuFF {
+    text-decoration: none;
+	color: var(--text-color-1);
+}
+
+#LinkMenuFF:hover {
+	color: var(--text-color-2);
+	cursor: pointer;
+}
 
 /*
 footer{
@@ -400,6 +446,15 @@ div.Derechos-reservados {
 	overflow: hidden;
 	padding-top: -0,5;
 }
+
+/**RESPONSIVE**/
+
+@media (max-width: 768px) {
+	.CONTENEDOR.Links-Candidatos ul, .CONTENEDOR.Links-Candidatos2 ul {
+		flex-direction: column;
+	}
+}
+
 
 /**NO FF
 
