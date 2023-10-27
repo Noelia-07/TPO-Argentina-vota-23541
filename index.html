@@ -108,11 +108,11 @@
 
         <script>
             //OPCIÓN 1 FLASH
-            window.onload = function() {
-                setTimeout(function() {
-                window.scrollTo(0, 0);
-                }, 2);
-            }
+            //window.onload = function() {
+            //  setTimeout(function() {
+            //  window.scrollTo(0, 0);
+            //  }, 2);
+            //}
 
             //OPCIÓN 2 FLASH
             //window.addEventListener("load", function() {
@@ -120,13 +120,13 @@
             //});
 
             //OPCIÓN 3 SCROLL
-            //window.addEventListener("load", function() {
-            //    window.scroll({
-            //        top: 0,
-            //        left: 0,
-            //        behavior: "smooth" // Agrega una animación suave
-            //    });
-            //});
+            window.addEventListener("load", function() {
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth" // Agrega una animación suave
+                });
+            });
         </script>
     </body>
 </html>
