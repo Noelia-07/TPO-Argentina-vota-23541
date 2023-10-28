@@ -62,18 +62,23 @@ header, main, aside, footer {
 
 header {
     display: flex;
+	z-index: 2;
+	position: fixed;
 	background-image: url(Imagenes/IMAGEN\ FOOTER\ ok_Mesa\ de\ trabajo\ 1.png);
     /*align-items: center;*/
     /*justify-content: center;*/
     /*padding: 1rem;*/
 }
 
+
 #Menu-header {
     display: flex;
+	opacity: 1;
 	/*place-content: space-around;*/
     justify-content: center;
 	padding-top: 1em;
 	padding-bottom: 1em;
+	
 }
 
 #LinkMenu {
@@ -85,11 +90,46 @@ header {
 #LinkMenu:hover {
 	color: var(--text-color-2);
 	cursor: pointer;
+	transition: all 300ms;
+	scale: 1.1;
 }
 
 header #Imagen-header {
 	width: 100%;
   	height: auto;
+}
+
+/*Menu Hamburguesa*/
+.bars__menu {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	display: none;
+	margin-top: 1em;
+	margin-left: 2em;
+}
+
+.bars__menu span {
+	display: block;
+	width: 100%;
+	height: 4px;
+	background: rgb(40, 187, 255);
+	border-radius: 15px;
+	margin-top: 8px;
+	transform-origin: 0px 100%;
+	transition: all 300ms;
+
+}
+
+.activeline1__bars-menu {
+	transform: rotate(45deg) translate(-2px, 1px);
+}
+.activeline3__bars-menu {
+	transform: rotate(-45deg) translate(-4px, 2px);
+}
+.activeline2__bars-menu {
+	opacity: 0;
+	margin-left: -30px;
 }
 /* #Menu-header {
 	padding-top: 1em;
@@ -99,8 +139,6 @@ header #Imagen-header {
 #LinkMenu {
 	color: var(--text-color-1);
 }*/
-
-
 /* NO header, main, footer {
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -112,7 +150,6 @@ header #Imagen-header {
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
-
 .JML:hover, .PBL:hover, .SML:hover, .JSL:hover, .MBL:hover {
 	transform: scale(1.1);
 	}
@@ -153,6 +190,7 @@ header #Imagen-header {
 	place-content: space-between;
 }
 
+/*Acomodando las fotos candidatos en el index*/
 .JML {
 	margin-left: 1em;
 }
@@ -168,6 +206,7 @@ header #Imagen-header {
 .JSL{
 	margin-left: 6em;
 }
+/**/
 
 /*NO .Menu-FF {
 	margin-left: 50em;
@@ -220,6 +259,8 @@ div.CONTENEDOR, div.Redes-Sociales-FF, div.Menu-FF {
 	top: 0;
 	width: 50%;
 	height: 100%;
+	z-index: 1;
+
 }
 
 
@@ -452,14 +493,6 @@ div.Derechos-reservados {
 	padding-top: -0,5;
 }
 
-/**RESPONSIVE**/
-
-@media (max-width: 768px) {
-	.CONTENEDOR.Links-Candidatos ul, .CONTENEDOR.Links-Candidatos2 ul {
-		flex-direction: column;
-	}
-}
-
 
 /**NO FF
 
@@ -505,3 +538,210 @@ EX Footer {
 	}
 	
 *****/
+
+
+
+/**RESPONSIVE**/
+
+.abrir-menu, .cerrar-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+	.CONTENEDOR.Links-Candidatos ul, .CONTENEDOR.Links-Candidatos2 ul {
+		flex-direction: column;
+	}
+	header{
+		display: sticky;
+		z-index: 1;
+	}
+	#Menu-header{
+		display: solid;
+		flex-direction: column;
+		padding: 20px;
+		opacity: 1;
+		visibility: visible;		
+	}
+	.bars__menu {
+
+		display: block;
+	}
+	.bars__menu:checked ~ #Menu-header{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.Links-Candidatos ul,.Links-Candidatos2 ul{
+		/* display: flex; */
+		/* flex-direction: ; */
+		flex-wrap: wrap;
+		justify-content: center
+	}
+	
+	.JML,.PBL,.SML,.JSL,.MBL {
+		display: flex;
+		align-self: center;
+		
+	}
+	
+	#SM-titulo  {
+		color: var(--text-color-2);
+		text-align: center;
+		font-size: 2em;
+		margin: 0;
+		padding: 0;
+	}
+
+}
+
+
+@media only screen and (max-width: 550px) {
+    .abrir-menu, .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+	
+	header{
+		justify-content: flex-end;
+	}
+
+	.Links-Candidatos ul,.Links-Candidatos2 ul{
+		display: flex !important;
+		flex-direction: column;
+		align-content: center;
+		
+	}
+     
+    .Links-Candidatos img,.Links-Candidatos2 img{
+		width: 250px;
+		/* height: 200px; */
+		
+	}
+
+	.PBL img{
+       width: 200px;
+	
+	}
+
+    .JML,.PBL,.SML,.JSL,.MBL {
+		display: flex;
+		/* align-self: center; */
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		/* align-content: center;
+		flex-wrap: nowrap */
+	}
+
+	.Redes-Sociales-FF ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.MFF{
+		
+		visibility: hidden;
+	} 
+
+	#Citas ul{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+	}
+
+
+
+    .abrir-menu {
+        color: #1c1c1c;
+		position: fixed;
+		z-index: 1000;
+		
+    }
+
+
+    .cerrar-menu {
+        color: #1c1c1c;
+		z-index: 1100;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #5581B3;
+        padding: 1rem;
+        box-shadow: 0 0 0 100vmax rgba(77, 131, 239, 0.5);
+		z-index: 1100;
+    }
+
+    .nav.visible {
+        opacity: 90%;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+   
+	.DEB-ATE {
+		/* display: flex;
+		align-self: center; */
+		position: relative;
+        padding-bottom: 56.25%; 
+        padding-top: 200px; 
+        height: 100%;
+        overflow: hidden;
+	}
+   
+	.DEB-ATE iframe {
+		position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+	}
+    
+	
+	/* .CONTENEDOR iframe{
+		position: absolute;
+		overflow: hidden;
+	    top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+	} */
+
+    .PARTIDO{
+		width: 200px;
+	}
+
+    .Presentacion{
+		margin: 1rem;
+		padding: 1rem;
+	}
+
+	.DC-LISTA{
+		margin: 1rem;
+		padding: 1rem;
+	}
+
+
+	} 
+
+
+/* fin del media Q. */
+

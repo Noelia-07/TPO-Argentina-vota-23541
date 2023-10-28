@@ -11,8 +11,14 @@
     </head>
 
     <body>
+
         <header>
-            <div class="CONTENEDOR">               
+            
+
+            </div>
+        <button class="abrir-menu" id="abrir"><i class='bx bx-menu'></i></button>
+            <div class="CONTENEDOR">
+                <button class="cerrar-menu" id="cerrar"><i class='bx bx-x-circle'></i></button>               
                 <nav id="Menu-header">                
                     <a id="LinkMenu" href="index.html"> <B>INICIO</B></a>
                     <a id="LinkMenu" href="DEBATE.html"> <B>PRIMER DEBATE</B></a>
@@ -21,9 +27,8 @@
                 </nav>
             </div>
         </header>
-
         <img id="Imagen-header" src="Imagenes/ARRIBA ARG VOTA con títulos.png" alt="Isologo Argentina Vota" width="100%">
-
+        
         <main>
             <div class="CONTENEDOR">
                 <section class="Links-Candidatos">
@@ -36,7 +41,6 @@
                         </li>
                     </ul>
                 </section>
-
                 <section class="Links-Candidatos2">
                     <ul>
                         <li class="JSL"><a href="Juan Schiaretti.html"> <img src="Imagenes\SCHIARETTI HOME_Mesa de trabajo 1.png" alt="Juan Schiaretti link a su page" width="300"></a>
@@ -47,7 +51,6 @@
                 </section>
             </div>
         </main>
-
         <aside id="Servicios">
             <div class="CONTENEDOR">
                 <div>
@@ -91,12 +94,6 @@
                         <li><img src="Imagenes/qrcode_arg Lo que hay que saber sobre las elecciones.png" alt="QR preguntas frecuentes" width="90"></li>
                     </ul>
 
-                    <ul class="MFF">
-                        <li><a id="LinkMenuFF" href="index.html"> <B>INICIO</B></a> </li>
-                        <li><a id="LinkMenuFF" href="DEBATE.html"> <B>PRIMER DEBATE</B></a> </li>
-                        <li><a id="LinkMenuFF" href="DEBATE 2.html"> <B>SEGUNDO DEBATE</B></a> </li>
-                        <li><a id="LinkMenuFF" href="RESULTADOS.html"> <B>RESULTADOS</B></a> </li>
-                    </ul>             
                 </div>
 
                 <div class="Derechos-reservados">
@@ -104,14 +101,15 @@
                 </div>
 
             </div>
-        </footer>
 
+        </footer>
+        
         <script>
             //OPCIÓN 1 FLASH
             //window.onload = function() {
-            //  setTimeout(function() {
-            //  window.scrollTo(0, 0);
-            //  }, 2);
+            //    setTimeout(function() {
+            //    window.scrollTo(0, 0);
+            //    }, 2);
             //}
 
             //OPCIÓN 2 FLASH
@@ -127,6 +125,13 @@
                     behavior: "smooth" // Agrega una animación suave
                 });
             });
+        </script>
+        <script type:"text/javascript" >
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector ("header");
+                header.classList.toggle("abajo", window.scrollY>0);
+            })
+        
         </script>
     </body>
 </html>
