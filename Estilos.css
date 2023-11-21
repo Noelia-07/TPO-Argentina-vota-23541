@@ -397,7 +397,7 @@ div.CONTENEDOR, div.Redes-Sociales-FF, div.Menu-FF {
 	margin-bottom: 0.5em;
 }
 
-#Servicios input.text, #Servicios textarea {
+#Servicios input.text, #Servicios textarea,#Servicios iframe {
 	width: 100%;
 	padding: 0,8em;
 	margin-bottom: 1em;
@@ -407,6 +407,7 @@ div.CONTENEDOR, div.Redes-Sociales-FF, div.Menu-FF {
 
 #Servicios input {
 	cursor: pointer;
+	height: 40px;
 }
 
 #Servicios div.CONTENEDOR div {
