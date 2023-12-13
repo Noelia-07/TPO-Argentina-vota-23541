@@ -72,10 +72,10 @@ header {
 
 
 #Menu-header {
-    display: flex;
+	display: flex;
 	opacity: 1;
 	/*place-content: space-around;*/
-    justify-content: center;
+	justify-content: center;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	
@@ -84,7 +84,7 @@ header {
 #LinkMenu {
     margin: 0 20px;
     text-decoration: none;
-	color: var(--text-color-1);
+    color: var(--text-color-1);
 }
 
 #LinkMenu:hover {
@@ -97,6 +97,7 @@ header {
 header #Imagen-header {
 	width: 100%;
   	height: auto;
+	padding-top: 1em;
 }
 
 /*Menu Hamburguesa*/
@@ -135,16 +136,14 @@ header #Imagen-header {
 	padding-top: 1em;
 	padding-bottom: 1em;
 }
-
 #LinkMenu {
 	color: var(--text-color-1);
 }
-
 #LinkMenu:hover {
 		
 	color: #FFF;
 	cursor: pointer;
-}
+} */
 
 
 /* Agregado GV */
