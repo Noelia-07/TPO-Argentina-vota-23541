@@ -65,9 +65,10 @@ header {
 	z-index: 2;
 	position: fixed;
 	background-image: url(Imagenes/IMAGEN\ FOOTER\ ok_Mesa\ de\ trabajo\ 1.png);
+	padding: 1rem;
     /*align-items: center;*/
     /*justify-content: center;*/
-    /*padding: 1rem;*/
+   
 }
 
 
