@@ -148,7 +148,7 @@ header #Imagen-header {
 } */
 
 
-/* Agregado GV */
+/* Agregado*/
 * {
     margin: 0;
     padding: 0;
@@ -418,17 +418,18 @@ header {
 	margin-left: 1.5em;
 }
 .PBL {
-	margin-right: 0.5em;
+	margin-right: 1em;
 }
 .SML {
-	margin-right: 4em;
+	margin-right: 5em;
 }
 .MBL {
-	margin-right: 8.5em;
+	margin-right: 9em;
 }
 .JSL{
-	margin-left: 6.5em;
+	margin-left: 7em;
 }
+
 /**/
 
 
