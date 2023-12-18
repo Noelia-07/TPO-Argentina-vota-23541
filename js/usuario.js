@@ -55,12 +55,12 @@ createApp({
       };
       fetch(this.url, options)
         .then(function () {
-          alert("✅ Registro grabado con éxito.");
+          alert("Registro grabado.");
           window.location.href = "./usuario.html";
         })
         .catch((err) => {
           console.error(err);
-          alert("❌ Error al grabar su comentario.");
+          alert("Error al grabar.");
         });
     },
   },
