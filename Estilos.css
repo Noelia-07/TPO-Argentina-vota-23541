@@ -407,10 +407,15 @@ header {
 	list-style-type: none;
 }
 
-.Links-Candidatos ul,.Links-Candidatos2 ul, #Citas ul, .Redes-Sociales-FF ul {
+.Links-Candidatos ul,.Links-Candidatos2 ul, .Redes-Sociales-FF ul {
 	display: flex;
 	justify-content: center;
 	/* place-content: space-between; */
+}
+
+#Citas ul
+	display: flex;
+	place-content: space-between;
 }
 
 /*Acomodando las fotos candidatos en el index*/
